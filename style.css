@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --background: #121214;
+    --white-contrast: #FFFFFF;
+    --black-color: #202024;
+    --prime-color: #3837fa;
+    --second-color: #4863f7;
+    --third-color: #d1d1d1;
+    --linear-gradient: (to right, #3837fa, #3737fa5a);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--white-contrast);
+    margin: 0;
+}
+header{
+    background-color: var(--black-color);
+    padding: 0.1px;
+}
+header h1{
+    font-size: 1.7rem;
+    padding: 0 38px;
+}
+
+main{
+    width: 900px;
+    margin: auto;
+}
+
+#start{
+    background-color: var(--black-color);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 6px 6px 0 0;
+    border-bottom: 3px solid;
+    border-bottom-color: var(--prime-color);
+    color: var(--third-color);
+}
+#start h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-size: 32px;
+    text-align: center;
+    color: var(--white-contrast);
+    margin-top: 4px;
+}
+
+.postagem{
+    background-color: var(--black-color);
+    color: var(--third-color);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 6px;
+}
+.postagem h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: var(--white-contrast);
+}
+.postagem:hover{
+    transition: 0.2s ease;
+    outline: 3px solid var(--prime-color);
+}
+
+.button{
+    background-color: var(--second-color);
+    border: none;
+    text-decoration: none;
+    padding: 12px;
+    color: var(--white-contrast);
+    font-weight: bolder;
+    border-radius: 6px;
+}
+.button:hover{
+    transition: 0.5s ease;
+    background-color: var(--prime-color);
+}
+
+.center{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-top: 1px solid var(--black-color);
+    
+}
+
+.copyright{
+    width: 900px;
+    font-size: 14px;
+    color: var(--third-color);
+    padding: 2rem;
+    margin: auto;
+}
+
+li{
+    margin-left: 18px;
+}
+
+table{
+    color: var(--third-color);
+}
+caption{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    background-color: midnightblue;
+}
+caption, th, td{
+    padding: 8px;
+    border: 2px solid black;
+    text-align: center;
+}

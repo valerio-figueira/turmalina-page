@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple webpage">
+    <title>Turmalina Page</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+
+<body>
+    <header>
+        <h1>Turmalina Page</h1>
+    </header>
+
+    <main>
+        <section id="start">
+            <h1>Inicie seus estudos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nemo quam nulla deserunt hic natus quae eveniet sapiente, quia quibusdam. Neque natus quos, officiis est sint saepe labore velit praesentium.</p>
+            <span class="center"><a href="#" class="button">INICIAR JORNADA</a></span>
+        </section>
+        <section class="postagem">
+            <h1>Abbreviation Tag</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo, quae explicabo. Quae provident vero alias sequi odit animi, deleniti tenetur deserunt incidunt praesentium dolores voluptate ad harum beatae rem at.</p>
+            
+            <li><abbr title="Hypertext Transfer Protocol">HTTP</abbr></li>
+            <li><abbr title="Internet Protocol">IP</abbr></li>
+            <li><abbr title="Domain Name System">DNS</abbr></li>
+            <li><abbr title="Transfer Control Protocol">TCP</abbr></li>
+        </section>
+        <section class="postagem">
+            <h1>Code Tag</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aliquid voluptatem qui impedit dolores laudantium vero explicabo in ea minus officiis assumenda ab nobis, maiores fuga esse! Explicabo, magnam tenetur?</p>
+            <pre>
+                <code>
+                    document.querySelector("body");
+                    document.querySelectorAll("body p");
+                </code>
+            </pre>
+        </section>
+        <section class="postagem">
+            <h1>Table Tag</h1>
+            <table>
+                <caption>GROCERY</caption>
+
+                <colgroup>
+                    <col style="background-color: midnightblue;">
+                    <col span="2" style="background-color: brown;">
+                    <col span="2" style="background-color: darkslateblue;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th rowspan="2" scope="colgroup"></th>
+                        <th colspan="2" scope="colgroup">Afonsus's Store</th>
+                        <th colspan="2" scope="colgroup">Afonsa's Store</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Produced</th>
+                        <th scope="col">Sold</th>
+                        <th scope="col">Produced</th>
+                        <th scope="col">Sold</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">Broom</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>25</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Salt 1kg</td>
+                        <td>32</td>
+                        <td>15</td>
+                        <td>19</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Cookies</td>
+                        <td>30</td>
+                        <td>28</td>
+                        <td>20</td>
+                        <td>20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; Todos os direitos reservados - 2022</p>
+    </footer>
+</body>
+
+</html>
