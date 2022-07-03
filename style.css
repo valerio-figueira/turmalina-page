@@ -8,28 +8,86 @@
     --prime-color: #3837fa;
     --second-color: #4863f7;
     --third-color: #d1d1d1;
+    --colored-hover-link: #5d6dff;
     --linear-gradient: (to right, #3837fa, #3737fa5a);
+    --max-width: 900px;
+    --min-width: 360px;
 }
+
+
 
 body{
     font-family: 'Roboto', sans-serif;
     background-color: var(--background);
     color: var(--white-contrast);
     margin: 0;
+    min-width: var(--min-width);
+}
+
+
+
+.flex-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2.5rem;
 }
 header{
     background-color: var(--black-color);
-    padding: 0.1px;
 }
 header h1{
     font-size: 1.7rem;
-    padding: 0 38px;
+    padding: 0.5rem;
+    transition: 0.5s;
+}
+header h1:hover{
+    transform: scale(1.1);
+    color: var(--colored-hover-link);
+}
+#main-title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.6em;
+    font-weight: bolder;
+}
+.navbar a{
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 1.1em;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--white-contrast);
+    transition: 0.5s;
+}
+.navbar a:hover{
+    color: var(--colored-hover-link);
+    transform: scale(1.15);
+}
+.navbar .mobile{
+    display: none;
+    font-size: 1.5em;
 }
 
+
+
+
+
+
+
+
+
+
+
 main{
-    width: 900px;
+    max-width: var(--max-width);
     margin: auto;
 }
+
+
+
 
 #start{
     background-color: var(--black-color);
@@ -43,11 +101,14 @@ main{
 #start h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bolder;
-    font-size: 32px;
+    font-size: 2rem;
     text-align: center;
     color: var(--white-contrast);
     margin-top: 4px;
 }
+
+
+
 
 .postagem{
     background-color: var(--black-color);
@@ -55,16 +116,21 @@ main{
     padding: 2rem;
     margin: 2rem 0;
     border-radius: 6px;
+    transition: 150ms;
+    overflow-x: hidden;
 }
 .postagem h1{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-    color: var(--white-contrast);
+    color: var(--white-contrast);    
 }
-.postagem:hover{
-    transition: 0.2s ease;
+.postagem:hover{    
     outline: 3px solid var(--prime-color);
+    overflow-x: scroll;
 }
+
+
+
 
 .button{
     background-color: var(--second-color);
@@ -80,24 +146,32 @@ main{
     background-color: var(--prime-color);
 }
 
+
+
+/*TO CENTER OBJECTS*/
 .center{
     display: block;
     text-align: center;
     padding: 10px;
 }
 
+
+
 footer{
     border-top: 1px solid var(--black-color);
     
 }
-
 .copyright{
-    width: 900px;
-    font-size: 14px;
+    max-width: var(--max-width);
+    font-size: 0.9rem;
+    font-weight: bolder;
+    font-style: italic;
     color: var(--third-color);
     padding: 2rem;
     margin: auto;
 }
+
+
 
 li{
     margin-left: 18px;
@@ -115,4 +189,77 @@ caption, th, td{
     padding: 8px;
     border: 2px solid black;
     text-align: center;
+}
+
+
+
+@media screen and (max-width: 930px) {
+    main{
+        margin: 0 15px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .navbar a{
+        display: none;
+    }
+    .navbar .mobile{
+        display: inline-block;
+        cursor: pointer;
+        font-size: 1.8rem;
+        padding: 0 0 1rem 0;
+    }
+    .navbar .mobile:hover{
+        transform: scale(1.5);
+    }
+
+
+    .flex-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .open-mobile-nav header h1{
+        font-size: 0.2rem;
+    }
+    .open-mobile-nav a, .open-mobile-nav .mobile{
+        display: block;
+        text-align: center;
+        margin: 1.2rem 0;
+        padding: 0;
+    }
+    .open-mobile-nav a:hover{
+        transform: scale(1.4);
+    }
+
+
+    .copyright{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 450px) {
+    .navbar a{
+        display: none;
+    }
+    .navbar .mobile{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .open-mobile-nav header h1{
+        font-size: 0.2rem;
+    }
+    .open-mobile-nav a, .open-mobile-nav .mobile{
+        display: block;
+        text-align: center;
+        margin: 1.2rem 0;
+        padding: 0;
+    }
+    .open-mobile-nav a:hover{
+        transform: scale(1.4);
+    }
+
+
+    table{
+        font-size: 1rem;
+    }
 }
